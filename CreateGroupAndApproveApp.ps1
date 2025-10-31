@@ -1,5 +1,5 @@
 # Variables
-$GroupName             = "LAG-App-Autotask Contacts Sync "
+$GroupName             = "LAG-App-Autotask Contacts Sync"
 $GroupMembershipRule   = "(user.assignedPlans -any (((assignedPlan.servicePlanId -eq `"9aaf7827-d63c-4b61-89c3-182f06f82e5c`") -or (assignedPlan.servicePlanId -eq `"efb87545-963c-4e0d-99df-69c6916d9eb0`") -or (assignedPlan.servicePlanId -eq `"4a82b400-a79f-41a4-b4e2-e94f5787b113`")) -and assignedPlan.capabilityStatus -eq `"Enabled`") )-and (user.accountEnabled -eq true) -and (user.userType -eq `"Member`") -and (user.givenName -ne null) -and (user.surname -ne null)"
 $AppId                 = "9c9bec7d-a6bd-412a-9a89-2ed3fae50164"
 $MailTo                = "zulu@lagardegroep.nl"
@@ -166,4 +166,5 @@ Start-Process $mailtoUrl
 Disconnect-MgGraph -ErrorAction SilentlyContinue | Out-Null
 Write-Host "Script completed successfully." -ForegroundColor Green
 Read-Host "Press Enter to exit..."
+
 exit 0
