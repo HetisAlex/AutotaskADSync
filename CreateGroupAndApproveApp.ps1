@@ -168,3 +168,4 @@ Write-Host "Script completed successfully." -ForegroundColor Green
 Read-Host "Press Enter to exit..."
 
 exit 0
+
